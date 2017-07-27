@@ -1,0 +1,50 @@
+
+/**
+	css工具类集合
+*/
+// 弹性盒子容器
+// https://isux.tencent.com/flexbox.html
+// 参考https://www.tmall.com/
+.f-flex{
+	display: -webkit-box !important;
+	display: -webkit-flex !important;
+	display: -ms-flexbox !important;
+	display: flex !important;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	/**
+		http://taobaofed.org/blog/2015/11/11/flexbox-in-mobile-web/
+		低版本安卓下大多用的是老版本的规范，所以会导致一些问题：
+		在使用比例伸缩时会因为盒子内容大小不等导致内容无法等分的问题，这个时候可以为这个元素添加 width: 0%; 将其原始大小设为 0（比如 UC 浏览器，魅族 MX4，三星 N7100）；
+		旧版要求伸缩元素（ flex-item ）必须是块级元素，所以 inline 元素需要设置 display: block; 才可以正常显示。有部分国产手机的浏览器上就是这样的（比如：Vivo X3SW）；
+		Flex item 里面如果有一个块元素，设置了 margin-top，会出现溢出的问题，表现就是 margin 无效。需要在这个元素上添加 overflow:hidden; 来使其正常显示。
+		因为 Flexbox 有新版和旧版规范，新版的有些属性（比如：flex-wrap），老版规范下并不支持，出于兼容性，最好避免使用；
+		text-overflow: ellipsis; 在 display: flex; 元素上是没有效果的。
+	*/
+	// 一个flex单位，一般用于子元素自由拉伸
+	>.cell {
+		position: relative;
+		display: block;
+		width: 0;
+		max-width: 100%;
+		-webkit-box-flex: 1;
+		-webkit-flex: 1;
+		-ms-flex: 1;
+		flex: 1;
+		-webkit-flex-basis: 0;
+		-ms-flex-preferred-size: 0;
+		flex-basis: 0;
+	}
+}
+.f-tal {
+	text-align: left;
+}
+
+.f-tac {
+	text-align: center;
+}
+
+.f-tar {
+	text-align: right;
+}
