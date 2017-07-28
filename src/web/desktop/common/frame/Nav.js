@@ -30,7 +30,7 @@ class Nav extends React.Component {
                     mode="inline"
                 >
                     <Menu.Item key="index1"><IndexLink to="/">Home</IndexLink></Menu.Item>
-                    <Menu.Item key="index2"><Link to="/question">要完成的任务</Link></Menu.Item>
+                    <Menu.Item key="index2"><Link to="/questions">要完成的任务</Link></Menu.Item>
                     <Menu.Item key="index3"><Link to="/gitTag">git中tag分支的应用</Link></Menu.Item>
                     <SubMenu key="sub3" title={<span><Icon type="appstore" /><span>react</span></span>}>
                         <Menu.Item key="sub3-7"><Link to="react/note">应用总结</Link></Menu.Item>

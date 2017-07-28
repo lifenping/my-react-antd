@@ -8,8 +8,8 @@ export default {
   indexRoute: { component: Home },
   childRoutes: [
     {
-			path:'question',
-			component:require('./question').default
+			path:'questions',
+			component:require('./questions').default
 		},
      {
 			path:'gitTag',
