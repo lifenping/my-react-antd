@@ -14,6 +14,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin'); //webpack插件
 // const OpenBrowserPlugin = require('open-browser-webpack-plugin');//webpack插件
 // const CleanPlugin = require('clean-webpack-plugin')//webpack插件，用于清除目录文件
 const CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;//处理trunk
+// 在每次构建前清理 /dist 文件夹，只会生成用到的文件
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 const env = process.env.NODE_ENV
 
@@ -37,16 +39,11 @@ module.exports = {
 	devtool: 'cheap-module-source-map',
 	// entry: getEntry(),
 	entry: {
-		main: './src/web/desktop/index',
-		// 第三方库相关文件
-		vendor: []
+		main: './src/web/desktop/index'
 	},
 	output: {
-		path: __dirname + 'dist',
+		path: path.resolve(__dirname, 'docs'),
 		filename: '[name].js'
-		// ,
-		// publicPath: '/dist/'
-		// ,path: __dirname
 	},
 
 	// web2.0配置有所变动：resolve.modulesDirectories => resolve.modules
@@ -153,6 +150,7 @@ module.exports = {
 	},
 
 	plugins: [
+		new CleanWebpackPlugin(['docs']),
 		// new ExtractTextPlugin("[name].css"),
 		new ExtractTextPlugin('[name].[hash].css'),
 		//创建HtmlWebpackPlugin的实例

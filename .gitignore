@@ -12,7 +12,7 @@ bower_components
 .remote
 
 # 编译输出目录
-docs
+# docs
 
 # npm模块安装目录
 node_modules
@@ -24,7 +24,7 @@ npm-debug.log
 release
 
 # 不提交的本地配置文件
-
+# src/web/desktop/pages/questions.js
 
 # 缓存目录
 
