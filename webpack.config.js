@@ -39,7 +39,7 @@ module.exports = {
 	devtool: 'cheap-module-source-map',
 	// entry: getEntry(),
 	entry: {
-		main: './src/web/desktop/index'
+		main: './src/web/desktop/app'
 	},
 	output: {
 		path: path.resolve(__dirname, 'docs'),
@@ -79,7 +79,8 @@ module.exports = {
 			test: /\.jsx?$/,
 			exclude: /(node_modules)/,
 			// include: path.resolve(ROOT_PATH, 'node_modules'),
-			use: {
+			use:
+			['eslint-loader', {
 				loader: 'babel-loader',
 				// .babelrc 文件有定义
 				options: {
@@ -90,12 +91,13 @@ module.exports = {
 					],
 					"plugins": [["import", { "libraryName": "antd", "style": true }]]
 				}
-			}
+			}]
+
 		},
 		// 使用css modules
 		{
 			test: /\.(css|less)$/,
-			exclude:[
+			exclude: [
 				path.resolve(__dirname, 'node_modules'),
 				path.resolve(__dirname, 'src/web/desktop/common')
 			],
@@ -139,11 +141,11 @@ module.exports = {
 			options: {
 				limit: 10000
 			}
-		},{ // 加载字体文件, 路径为[path][name].ext
+		}, { // 加载字体文件, 路径为[path][name].ext
 			test: /\.(eot|svg|ttf|woff|woff2)$/,
 			// loader: 'file-loader?name=[path][name].[ext]?[hash]',
 			loader: 'file-loader',
-			options:{
+			options: {
 				name: "[path][name].[ext]?[hash]"
 			}
 		}]

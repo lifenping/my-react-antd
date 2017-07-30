@@ -18,7 +18,8 @@ class item extends Component {
 					<ul>
 						<li>
 {`
-一、使用JSX的嵌套写法：
+一、配置路由
+1、使用JSX的嵌套写法：
 React.render((
   <Router>
     <Route path="/" component={App}>
@@ -36,7 +37,7 @@ React.render((
   </Router>
 ), document.body)
 
-二、使用原生 route 数组对象：
+2、使用原生 route 数组对象：
 const routeConfig = [
   { path: '/',
     component: App,
@@ -59,6 +60,30 @@ const routeConfig = [
 ]
 
 React.render(<Router routes={routeConfig} />, document.body)
+
+二、Historie
+常用的 history 有三种形式， 但是你也可以使用 React Router 实现自定义的 history。
+
+browserHistory
+hashHistory
+createMemoryHistory
+
+browserHistory：
+Browser history 是使用 React Router 的应用推荐的 history。它使用浏览器中的 History API 用于处理 URL，创建一个像example.com/some/path这样真实的 URL 。
+但需要在服务器上设置配置
+location对象包括：
+pathname      同window.location.pathname
+search        同window.location.search
+state         一个捆绑在这个地址上的object对象
+action        PUSH, REPLACE, 或者 POP中的一个
+key           唯一ID
+
+hashHistory：
+不需要服务器任何配置就可以运行，但每一个 web 应用都应该用不带#的路由，推荐使用 browserHistory，所以hashHistory不适用于正式环境中
+
+createMemoryHistory：
+会在地址栏被操作或读取。这就解释了我们是如何实现服务器渲染的。同时它也非常适合测试和其他的渲染环境（像 React Native ）
+
 `}						
 						
 <h3>服务端渲染的应用？？？？</h3>	

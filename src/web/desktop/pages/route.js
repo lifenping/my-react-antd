@@ -1,4 +1,3 @@
-
 import Frame from 'frame'
 import Home from './home';
 
@@ -10,10 +9,6 @@ export default {
     {
 			path:'questions',
 			component:require('./questions').default
-		},
-     {
-			path:'gitTag',
-			component:require('./gitTag').default
 		},
     require('./doc/route').default,
     require('./js/route').default,

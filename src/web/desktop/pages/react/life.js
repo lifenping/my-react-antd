@@ -1,6 +1,5 @@
 
 import React, {Component} from 'react';
-import imgLife from './images/life.png'
 
 /**
 	jsx中html转义：
@@ -32,7 +31,7 @@ componentWillUnmount
 						
 {console.log("render")}
 {/*<img src="/#/web/desktop/pages/react/images/life.png" alt=""/>*/}
-<img src={imgLife} style={{width:"70%"}} alt=""/>
+<img src={require('./images/life.png')} style={{width:"60%"}} alt=""/>
 
             </pre>
 		);

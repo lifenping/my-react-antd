@@ -10,7 +10,7 @@ const SubMenu = Menu.SubMenu;
 class Nav extends React.Component {
     state = {
         theme: 'light',
-        current: '1',
+        current: '1'
     }
     handleClick = (e) => {
         console.log('click ', e);
@@ -31,13 +31,11 @@ class Nav extends React.Component {
                 >
                     <Menu.Item key="index1"><IndexLink to="/">Home</IndexLink></Menu.Item>
                     <Menu.Item key="index2"><Link to="/questions">要完成的任务</Link></Menu.Item>
-                    <Menu.Item key="index3"><Link to="/gitTag">git中tag分支的应用</Link></Menu.Item>
                     <SubMenu key="sub3" title={<span><Icon type="appstore" /><span>react</span></span>}>
                         <Menu.Item key="sub3-7"><Link to="react/note">应用总结</Link></Menu.Item>
                         <Menu.Item key="sub3-1"><Link to="react/react-router">react-router</Link></Menu.Item>
                         <Menu.Item key="sub3-3"><Link to="react/life">react组件的生命周期</Link></Menu.Item>
-                        <Menu.Item key="sub3-6"><Link to="react/redux">redux</Link></Menu.Item>
-                        <Menu.Item key="sub3-4"><Link to="react/material-ui">material-ui</Link></Menu.Item>
+                        <Menu.Item key="sub3-6">redux</Menu.Item>
                         <SubMenu key="sub3-2" title={<span><Icon type="book" />react Native</span>}>
                             <Menu.Item key="sub3-2-1"><Link to="react/react-native/enter">react Native入门</Link></Menu.Item>
                             <Menu.Item key="sub3-2-2"><Link to="react/react-native/xCode">xCode使用</Link></Menu.Item>
