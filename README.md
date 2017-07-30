@@ -13,8 +13,3 @@ webpack 搭建web站点
 - "eslint-plugin-jsx-a11y": "^6.0.2", 
 规则使用："extends": "airbnb", 
 
-
-
-
-
-
