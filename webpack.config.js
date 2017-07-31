@@ -43,8 +43,7 @@ module.exports = {
 	},
 	output: {
 		path: path.resolve(__dirname, 'docs'),
-		filename: '[name].js',
-		publicPath: "/",
+		filename: '[name].js'
 	},
 
 	// web2.0配置有所变动：resolve.modulesDirectories => resolve.modules
@@ -81,7 +80,7 @@ module.exports = {
 			exclude: /(node_modules)/,
 			// include: path.resolve(ROOT_PATH, 'node_modules'),
 			use:
-			['eslint-loader', {
+			[/* 'eslint-loader', */ {
 				loader: 'babel-loader',
 				// .babelrc 文件有定义
 				options: {
@@ -153,7 +152,7 @@ module.exports = {
 	},
 
 	plugins: [
-		// new CleanWebpackPlugin(['docs']),
+		new CleanWebpackPlugin(['docs']),
 		// new ExtractTextPlugin("[name].css"),
 		new ExtractTextPlugin('[name].[hash].css'),
 		// 创建HtmlWebpackPlugin的实例
@@ -180,7 +179,7 @@ module.exports = {
 	],
 
 	devServer: {
-		port: 1111,
+		port: 2222,
 		historyApiFallback: true,
 		// hot: true,
 		// hotOnly: true
