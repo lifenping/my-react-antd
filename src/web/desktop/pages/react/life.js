@@ -30,7 +30,7 @@ componentWillUnmount
 `}										
 						
 {console.log("render")}
-{/*<img src="/#/web/desktop/pages/react/images/life.png" alt=""/>*/}
+{/* <img src="/#/web/desktop/pages/react/images/life.png" alt=""/> */}
 <img src={require('./images/life.png')} style={{width:"60%"}} alt=""/>
 
             </pre>

@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import style from './index.less'
 
 class item extends Component {
+	constructor (props) {
+		super(props)
+	}
 	render() {
 		return (
 			<pre>
@@ -33,7 +36,7 @@ router中的history="browserHistory"时，<img src= />加载不到，并且页�
 				{`
 项目tag标签的了解及合代码时和master中tag不一致时的操作；
 了解后台系统前后端菜单的配置代码；
-阅读moment插件文档及及从控制台运行文档中的moment方法；
+阅读moment插件文档及及从控制台运行文档中的moment方法； 
 wepack中 eslint 的使用及CleanWebpackPlugin插件的应用；
 了解react-router中的history的api；
 
@@ -47,4 +50,4 @@ wepack中 eslint 的使用及CleanWebpackPlugin插件的应用；
 	}
 }
 
-export default item;
+export default item

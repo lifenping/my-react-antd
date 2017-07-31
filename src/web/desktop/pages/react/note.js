@@ -26,7 +26,8 @@ class item extends Component {
 `}
 <div>{content}</div>
 <div dangerouslySetInnerHTML={{ __html: content }}></div>
-            
+
+         
         
             
 </pre>

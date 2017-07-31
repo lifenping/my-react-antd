@@ -57,7 +57,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 323);
@@ -48170,11 +48170,7 @@ var Nav = function (_React$Component) {
                                 'span',
                                 null,
                                 __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd_lib_icon___default.a, { type: 'appstore' }),
-                                __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
-                                    'span',
-                                    null,
-                                    'react'
-                                )
+                                'react'
                             ) },
                         __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
                             __WEBPACK_IMPORTED_MODULE_3_antd_lib_menu___default.a.Item,
@@ -48241,21 +48237,8 @@ var Nav = function (_React$Component) {
                                     'span',
                                     null,
                                     __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd_lib_icon___default.a, { type: 'appstore' }),
-                                    __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
-                                        'span',
-                                        null,
-                                        'antd'
-                                    )
+                                    'antd'
                                 ) },
-                            __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
-                                __WEBPACK_IMPORTED_MODULE_3_antd_lib_menu___default.a.Item,
-                                { key: 'sub3-5-1' },
-                                __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
-                                    __WEBPACK_IMPORTED_MODULE_5_react_router__["Link"],
-                                    { to: 'react/antd/moment' },
-                                    'moment\u7EC4\u4EF6'
-                                )
-                            ),
                             __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
                                 __WEBPACK_IMPORTED_MODULE_3_antd_lib_menu___default.a.Item,
                                 { key: 'sub3-5-2' },
@@ -48273,11 +48256,7 @@ var Nav = function (_React$Component) {
                                 'span',
                                 null,
                                 __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd_lib_icon___default.a, { type: 'appstore' }),
-                                __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
-                                    'span',
-                                    null,
-                                    'webpack\u7B14\u8BB0'
-                                )
+                                'webpack\u7B14\u8BB0'
                             ) },
                         __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
                             __WEBPACK_IMPORTED_MODULE_3_antd_lib_menu___default.a.Item,
@@ -48287,26 +48266,6 @@ var Nav = function (_React$Component) {
                                 { to: '/webpackPages/note' },
                                 '\u5E94\u7528\u603B\u7ED3'
                             )
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
-                            __WEBPACK_IMPORTED_MODULE_3_antd_lib_menu___default.a.Item,
-                            { key: 'sub1-2' },
-                            'css modules'
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
-                            __WEBPACK_IMPORTED_MODULE_3_antd_lib_menu___default.a.Item,
-                            { key: 'sub1-3' },
-                            'souce map'
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
-                            __WEBPACK_IMPORTED_MODULE_3_antd_lib_menu___default.a.Item,
-                            { key: 'sub1-4' },
-                            '\u591A\u5165\u53E3\uFF08\u9875\u9762\uFF09\u5E94\u7528'
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
-                            __WEBPACK_IMPORTED_MODULE_3_antd_lib_menu___default.a.Item,
-                            { key: 'sub1-5' },
-                            'web\u7AD9\u70B9\u5E94\u7528react\u53CAwebpack\u5B66\u4E60'
                         )
                     ),
                     __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
@@ -48315,12 +48274,17 @@ var Nav = function (_React$Component) {
                                 'span',
                                 null,
                                 __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd_lib_icon___default.a, { type: 'appstore' }),
-                                __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
-                                    'span',
-                                    null,
-                                    'js'
-                                )
+                                'js'
                             ) },
+                        __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
+                            __WEBPACK_IMPORTED_MODULE_3_antd_lib_menu___default.a.Item,
+                            { key: 'sub4-6' },
+                            __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
+                                __WEBPACK_IMPORTED_MODULE_5_react_router__["Link"],
+                                { to: '/js/moment' },
+                                'moment\u5E94\u7528'
+                            )
+                        ),
                         __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
                             __WEBPACK_IMPORTED_MODULE_3_antd_lib_menu___default.a.Item,
                             { key: 'sub4-1' },
@@ -48349,46 +48313,25 @@ var Nav = function (_React$Component) {
                             __WEBPACK_IMPORTED_MODULE_3_antd_lib_menu___default.a.Item,
                             { key: 'sub4-5' },
                             'lodash'
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
-                            __WEBPACK_IMPORTED_MODULE_3_antd_lib_menu___default.a.Item,
-                            { key: 'sub4-6' },
-                            __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
-                                __WEBPACK_IMPORTED_MODULE_5_react_router__["Link"],
-                                { to: '/js/moment' },
-                                'moment\u5E94\u7528'
-                            )
                         )
                     ),
                     __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(SubMenu, { key: 'sub5', title: __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
                             'span',
                             null,
                             __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd_lib_icon___default.a, { type: 'appstore' }),
-                            __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
-                                'span',
-                                null,
-                                'nodejs'
-                            )
+                            'nodejs'
                         ) }),
                     __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(SubMenu, { key: 'sub6', title: __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
                             'span',
                             null,
                             __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd_lib_icon___default.a, { type: 'appstore' }),
-                            __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
-                                'span',
-                                null,
-                                'electron'
-                            )
+                            'electron'
                         ) }),
                     __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(SubMenu, { key: 'sub7', title: __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
                             'span',
                             null,
                             __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd_lib_icon___default.a, { type: 'appstore' }),
-                            __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
-                                'span',
-                                null,
-                                'app\u8C03\u7814'
-                            )
+                            'app\u8C03\u7814'
                         ) }),
                     __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
                         SubMenu,
@@ -48396,24 +48339,11 @@ var Nav = function (_React$Component) {
                                 'span',
                                 null,
                                 __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd_lib_icon___default.a, { type: 'appstore' }),
-                                __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
-                                    'span',
-                                    null,
-                                    '\u53C2\u8003\u6587\u6863'
-                                )
+                                '\u53C2\u8003\u6587\u6863'
                             ) },
                         __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
                             __WEBPACK_IMPORTED_MODULE_3_antd_lib_menu___default.a.Item,
                             { key: 'sub8-1' },
-                            __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
-                                __WEBPACK_IMPORTED_MODULE_5_react_router__["Link"],
-                                { to: 'doc/link' },
-                                'link'
-                            )
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
-                            __WEBPACK_IMPORTED_MODULE_3_antd_lib_menu___default.a.Item,
-                            { key: 'sub8-2' },
                             __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
                                 __WEBPACK_IMPORTED_MODULE_5_react_router__["Link"],
                                 { to: 'doc/markdown' },
@@ -55735,10 +55665,10 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var item = function (_Component) {
 	_inherits(item, _Component);
 
-	function item() {
+	function item(props) {
 		_classCallCheck(this, item);
 
-		return _possibleConstructorReturn(this, (item.__proto__ || Object.getPrototypeOf(item)).apply(this, arguments));
+		return _possibleConstructorReturn(this, (item.__proto__ || Object.getPrototypeOf(item)).call(this, props));
 	}
 
 	_createClass(item, [{
@@ -55851,7 +55781,7 @@ var item = function (_Component) {
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           "a",
-          { href: "https://segmentfault.com/markdown" },
+          { target: "_blank", href: "https://segmentfault.com/markdown" },
           "\u5F15\u7528\u6587\u6863"
         )
       );
