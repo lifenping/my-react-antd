@@ -27,7 +27,26 @@ class item extends Component {
 <div>{content}</div>
 <div dangerouslySetInnerHTML={{ __html: content }}></div>
 
-         
+{`
+1 验证组件传入的属性是否合理：
+import {PropTypes} from 'react'
+如：
+PropTyppes.propTypes={
+    name:PropTyppes.string.isRequired
+}
+2 state状态：
+是组件内部的属性，组件本身是一个状态机，它可以在constructor中通过this.state直接定义它的值，然后根据这些值来渲染不同的UI
+
+3 要给每个循环的组件添加一个唯一的key值
+
+4 无状态函数式组件：stateless functional component
+可把这类组件写成一个纯函数的形式，如：
+function Hoo(props){
+    return <li>{props.aa}</li>
+}
+
+
+`}     
         
             
 </pre>

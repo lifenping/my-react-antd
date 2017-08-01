@@ -39,15 +39,33 @@ pre-commit插件：提交代码时，通过eslint检测，若有问题不允许�
 "scripts": {
   "eslint": "eslint --ext .js src"
 }
-3 配置文件中添加配置内容：（.git/hooks 好像是在此目录下有配置文件...）
+3 在命令中配置："precommit": "npm run eslint"
+或：
+配置文件中添加配置内容：（.git/hooks 好像是在此目录下有配置文件...）
 "pre-commit": [
   "eslint"
 ]
 
-配置文件参考：http://eslint.cn/docs/user-guide/configuring
+配置文件参考：http://eslint.cn
 
 三、CleanWebpackPlugin
 在每次构建前清理 /dist 文件夹，只会生成用到的文件
+
+四、代码分离
+vendor 在 webpack 中对应的功能点是 CODE SPLITTING 也可以在此查看 webpack 对其的一些说明，
+功能点：代码分割，需要配合插件 CommonsChunkPlugin
+
+四、souce map
+devtool: 'cheap-module-source-map'
+具体查看文档：https://doc.webpack-china.org/configuration/devtool/#devtool
+
+五、模块热加载的应用：
+babel-preset-react-hmre  插件用于模块热加载（HMR）
+启动：
+可在.babelrc文件中添加以下配置
+"env":{
+    "development":["react-hmre"]
+}
 
 
 `}

@@ -29,6 +29,9 @@ bundle-loader的使用
 koa
 抽空把路由的history调为：browserHistory，并添加服务器配置：
 router中的history="browserHistory"时，<img src= />加载不到，并且页面路由只有第一次加载时显示ok,再次刷新或来回跳转就会不显示了，此时服务器要也要添加配置（？？）
+https://ant-tool.github.io/quick-start.html  项目的练习
+确认模块热加载是否开启：开启方式可在.bebelrc文件中添加配置代码或应用  --hot?待确认
+state的设计原择？
 
 
 				`}

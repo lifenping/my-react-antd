@@ -179,7 +179,7 @@ module.exports = {
 	],
 
 	devServer: {
-		port: 2222,
+		port: 1111,
 		historyApiFallback: true,
 		// hot: true,
 		// hotOnly: true

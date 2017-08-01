@@ -40,7 +40,7 @@ class Nav extends React.Component {
                             <Menu.Item key="sub3-2-1"><Link to="react/react-native/enter">react Native入门</Link></Menu.Item>
                             <Menu.Item key="sub3-2-2"><Link to="react/react-native/xCode">xCode使用</Link></Menu.Item>
                         </SubMenu>
-                        <SubMenu key="sub3-5" title={<span><Icon type="appstore" />antd</span>}>
+                        <SubMenu key="sub3-5" title={<span><Icon type="book" />antd</span>}>
                             <Menu.Item key="sub3-5-2"><Link to="react/antd/form">Form相关练习</Link></Menu.Item>
                         </SubMenu>
 

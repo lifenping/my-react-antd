@@ -64,6 +64,9 @@
 .midWrap {
   flex-direction: row;
 }
+.midWrap .nav i {
+  vertical-align: middle;
+}
 .wrap {
   padding: 15px;
   line-height: 30px;
@@ -2904,4 +2907,4 @@ samp {
   right: 16px;
 }
 
-/*# sourceMappingURL=main.e6dc79b8781ac0f5c60c.css.map*/
+/*# sourceMappingURL=main.2b3a7f7821a4ad29c639.css.map*/
