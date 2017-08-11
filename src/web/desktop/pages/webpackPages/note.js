@@ -67,6 +67,44 @@ babel-preset-react-hmre  插件用于模块热加载（HMR）
     "development":["react-hmre"]
 }
 
+六、在应用css modules的文件中应用global css并不打包，可用:global标签来包含不作用于css modules中的内容，如：
+:global{
+	.lastCol{
+			border:0;
+		}
+}
+:global .lastCol{
+	border-right-width:0;
+}
+aa{
+	:global{border:0;}
+}
+
+// your import; foo contains .foo .bar { }
+@global-import 'foo';
+
+// we wrap :global around it
+:global {
+.foo .bar { }
+}
+
+// then postcss-nested runs
+:global .foo .bar { }
+
+// then local by default runs
+.foo .bar { }
+
+
+
+@global-import from 'bootstrap/buttons';
+would turn into
+
+:global {
+...
+styles from 'bootstrap/buttons';
+...
+}
+
 
 `}
 
