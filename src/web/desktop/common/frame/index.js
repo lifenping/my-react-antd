@@ -7,6 +7,7 @@ import Footer from './footer'
 import Nav from './Nav'
 import './core.less'
 import './style.less'
+import 'index.less'
 
 class Frame extends Component {
 	constructor(props) {

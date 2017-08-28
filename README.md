@@ -1,5 +1,5 @@
 # 项目说明
-webpack 搭建web站点
+webpack react study
 
 # 项目启动说明：
 
@@ -28,6 +28,14 @@ webpack 搭建web站点
 
 
  注：目前未开启eslint,原因是应用eslint-loader会报错。。
+ 
+ ### react中插入markdown内容
+ ``` 
+ https://github.com/rexxars/react-markdown  
+ import ReactMarkdown from 'react-markdown'  
+ <ReactMarkdown source={"### sss"} />  
+ source中不能包含<div>return等内容
+ ``` 
  
 
 

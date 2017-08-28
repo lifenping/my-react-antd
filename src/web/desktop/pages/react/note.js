@@ -1,16 +1,22 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import ReactMarkdown from 'react-markdown'
+import CodeBlock from 'CodeBlock.js'
+// import Note from './Note.md'
 
 class item extends Component {
     render() {
         let content = "<span>动态插入的内容</span>"
         return (
-
-
-
 <pre>
+
+
+ <ReactMarkdown source={"### 插入markdown语法内容测试"} renderers={Object.assign({}, ReactMarkdown.renderers, {
+        CodeBlock: CodeBlock
+    })} />
+
+<br />
 <h3>React中pre标签的使用：</h3>
-{`
-在react中pre标签内容中的首行空格及空行是会被去除的，这点和在.html文件中应用pre标签是不同的，若想保留空格及空行，可在内容外添加大括号和反引号(可把里面的内容当成文本输出)，具体可查看本页源码。
+{`在react中pre标签内容中的首行空格及空行是会被去除的，这点和在.html文件中应用pre标签是不同的，若想保留空格及空行，可在内容外添加大括号和反引号(可把里面的内容当成文本输出)，具体可查看本页源码。
 
 `}
 

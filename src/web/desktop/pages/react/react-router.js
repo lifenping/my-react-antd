@@ -1,6 +1,7 @@
 
 import React, {Component} from 'react';
-
+import { Link } from 'react-router'
+import {Button} from 'antd';
 /**
 	jsx中html转义：
 	默认插入到dom中的内容是会被转义的，防止xxs。
@@ -8,16 +9,27 @@ import React, {Component} from 'react';
 	给标签添加dangerouslySetInnerHTML属性，来转出html代码
  */
 class item extends Component {
+	constructor(props){
+		super(props)
+	}
+	goMbSys() {
+		this.props.history.push("https://baidu.com")
+	}
+
 	render() {
 		return (
 			<pre>
                 <p>react-router 的使用总结：</p>
                 <p><a target="_blank" href="https://react-guide.github.io/react-router-cn/docs/API.html">https://react-guide.github.io/react-router-cn/docs/API.html</a></p>
 				<div>
-					<h3>路由配置</h3>
-					<ul>
-						<li>
+{/* <Link to="https://baidu.com">测试Link标签</Link> */}
+<br />
+{/* <Button type="primary" onClick={this.goMbSys.bind(this)}>跳转到会员系统</Button> */}
+<br />
+<a href="https://baidu.com">测试链接</a>
+
 {`
+
 一、配置路由
 1、使用JSX的嵌套写法：
 React.render((
@@ -161,8 +173,7 @@ Account	componentDidMount
 						
 {console.log("render")}
 
-					</li>
-					</ul>
+
 				</div>
             </pre>
 		);

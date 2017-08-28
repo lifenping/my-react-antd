@@ -2,7 +2,7 @@
     markdown 的使用总结：
 */
 import React, { Component } from 'react';
-import style from "../index.less"
+import style from "index.less"
 
 class item extends Component {
     render() {

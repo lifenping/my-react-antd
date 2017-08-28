@@ -21,8 +21,23 @@ export default {
 			component:require('./life').default
 		},
 		{
+			path:'antd',
+			component:require('./antd').default
+		},{
+			path:'react-practice',
+			component:require('./react-practice').default
+		},
+		{
 			path:'react-router',
 			component:require('./react-router').default
+		},
+		{
+			path:'redux',
+			component:require('./redux').default
+		},
+		{
+			path:'reactNative',
+			component:require('./reactNative').default
 		}
 	]
 }

@@ -30,25 +30,19 @@ class Nav extends React.Component {
                     mode="inline"
                 >
                     <Menu.Item key="index1"><IndexLink to="/">Home</IndexLink></Menu.Item>
-                    <Menu.Item key="index2"><Link to="/questions">要完成的任务</Link></Menu.Item>
+                    {/* <Menu.Item key="index2"><Link to="/questions">要完成的任务</Link></Menu.Item> */}
                     <SubMenu key="sub3" title={<span><Icon type="appstore" />react</span>}>
                         <Menu.Item key="sub3-7"><Link to="react/note">应用总结</Link></Menu.Item>
                         <Menu.Item key="sub3-1"><Link to="react/react-router">react-router</Link></Menu.Item>
                         <Menu.Item key="sub3-3"><Link to="react/life">react组件的生命周期</Link></Menu.Item>
-                        <Menu.Item key="sub3-6">redux</Menu.Item>
-                        <SubMenu key="sub3-2" title={<span><Icon type="book" />react Native</span>}>
-                            <Menu.Item key="sub3-2-1"><Link to="react/react-native/enter">react Native入门</Link></Menu.Item>
-                            <Menu.Item key="sub3-2-2"><Link to="react/react-native/xCode">xCode使用</Link></Menu.Item>
-                        </SubMenu>
-                        <SubMenu key="sub3-5" title={<span><Icon type="book" />antd</span>}>
-                            <Menu.Item key="sub3-5-2"><Link to="react/antd/form">Form相关练习</Link></Menu.Item>
-                        </SubMenu>
-
+						<Menu.Item key="sub3-6"><Link to="react/redux">redux</Link></Menu.Item>
+						<Menu.Item key="sub3-8"><Link to="react/antd">antd 练习</Link></Menu.Item>
+						<Menu.Item key="sub3-9"><Link to="react/react-practice">react 练习</Link></Menu.Item>
+						<Menu.Item key="sub3-10"><Link to="react/reactNative">react Native练习及工具(xcode)使用</Link></Menu.Item>
                     </SubMenu>
                     <SubMenu key="sub1" title={<span><Icon type="appstore" />webpack笔记</span>}>
                         <Menu.Item key="sub1-6"><Link to="/webpackPages/note">应用总结</Link></Menu.Item>
                     </SubMenu>
-
                     <SubMenu key="sub4" title={<span><Icon type="appstore" />js</span>}>
                         <Menu.Item key="sub4-6"><Link to="/js/moment">moment应用</Link></Menu.Item>
                         <Menu.Item key="sub4-1"><Link to="js/reg">正则</Link></Menu.Item>
