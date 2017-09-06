@@ -56,13 +56,13 @@ export default class Item extends Component {
 			<div>
 				<pre>
 					{`
-一、在form表单中插入input组件，且给Input组件添加getFieldDecorator等属性，同时也可以在该组件中插入其它不带getFieldDecorator属性的标签
+一、antd中的form表单及表单元素的应用, Form.create({})()及getFieldDecorator的应用
 					`}
 				</pre>
 				<FormBase>
 				
 					<CheckboxItem name="checkBox" label="复选框" options={[{ "value": "1","label":"选项一" }, { "value": "2","label":"选项二" }]} />
-					<p>Form中插入p标签</p>
+					<p>Form组件中插入不带有getFieldDecorator属性的child元素</p>
 	
 				</FormBase>
 			</div>

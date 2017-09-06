@@ -45,7 +45,6 @@ class Nav extends React.Component {
                     </SubMenu>
                     <SubMenu key="sub4" title={<span><Icon type="appstore" />js</span>}>
                         <Menu.Item key="sub4-6"><Link to="/js/moment">moment应用</Link></Menu.Item>
-                        <Menu.Item key="sub4-1"><Link to="js/reg">正则</Link></Menu.Item>
                         <Menu.Item key="sub4-2">promise</Menu.Item>
                         <Menu.Item key="sub4-3">Fetch</Menu.Item>
                         <Menu.Item key="sub4-4">Decimal组件研究与应用</Menu.Item>

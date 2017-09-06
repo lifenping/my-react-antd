@@ -33,8 +33,12 @@ moment().add(7, 'days').format('YYYY年MM月DD日');  //"2017年07月28日"
 使用文档：
 http://momentjs.cn/docs/#/use-it/node-js/
 
+moment(undefined) 输出的是今天日期的对象
+
 `}
 {console.log (moment())}
+
+{console.log(moment(undefined))}
 
 
 </pre>

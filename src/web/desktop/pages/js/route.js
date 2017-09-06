@@ -20,10 +20,6 @@ export default {
 		{
 			path:'moment',
 			component:require('./moment').default
-		},
-		{
-			path:'reg',
-			component:require('./reg').default
 		}
 	]
 }
