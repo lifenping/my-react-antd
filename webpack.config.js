@@ -80,18 +80,18 @@ module.exports = {
 			exclude: /(node_modules)/,
 			// include: path.resolve(ROOT_PATH, 'node_modules'),
 			use:
-			[/* 'eslint-loader', */ {
-				loader: 'babel-loader',
-				// .babelrc 文件有定义
-				options: {
-					"presets": [
-						"react",
-						["es2015", { "modules": false }],
-						"stage-0"
-					],
-					"plugins": [["import", { "libraryName": "antd", "style": true }]]
-				}
-			}]
+				[/* 'eslint-loader', */ {
+					loader: 'babel-loader',
+					// .babelrc 文件有定义
+					options: {
+						"presets": [
+							"react",
+							["es2015", { "modules": false }],
+							"stage-0"
+						],
+						"plugins": [["import", { "libraryName": "antd", "style": true }]]
+					}
+				}]
 
 		},
 		// 使用css modules
@@ -152,8 +152,8 @@ module.exports = {
 			test: /\.md$/,
 			// loader: 'babel-loader!markdown-component-loader',
 			use:
-			// ['babel-loader', 'markdown-loader', 'react-markdown', 'html-loader', 'md-to-react',"raw-loader"]
-			['react-markdown',"raw-loader",'json-loader']
+				// ['babel-loader', 'markdown-loader', 'react-markdown', 'html-loader', 'md-to-react',"raw-loader"]
+				['react-markdown', "raw-loader", 'json-loader']
 		},
 		{
 			test: /\.json$/,
@@ -192,21 +192,13 @@ module.exports = {
 	devServer: {
 		port: 1111,
 		historyApiFallback: true,
-		// hot: true,
-		// hotOnly: true
+		hot: true,
 		inline: true,
-		// 暂时用不到此代理，若需要用到时只启动webpack服务器即可，和json-server服务器无任何关系
-		// ,
-		// proxy: {
-		// 	'/api': {
-		// 		target: {
-		// 			"host": "baidu.com",
-		// 			"protocol": 'https:'
-		// 		},
-		// 		ignorePath: true,
-		// 		changeOrigin: true,
-		// 		secure: false
-		// 	}
-		// }
+		proxy: {
+			'/api/*': {
+				target: `http://127.0.0.1:1112`,
+				secure: false
+			}
+		}
 	}
 }

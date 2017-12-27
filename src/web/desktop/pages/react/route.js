@@ -13,31 +13,35 @@ export default {
 	 */
 	childRoutes: [
 		{
-			path:'note',
-			component:require('./note').default
+			path: 'note',
+			component: require('./note').default
 		},
 		{
-			path:'life',
-			component:require('./life').default
+			path: 'life',
+			component: require('./life').default
 		},
 		{
-			path:'antd',
-			component:require('./antd').default
-		},{
-			path:'react-practice',
-			component:require('./react-practice').default
+			path: 'antd',
+			component: require('./antd').default
+		}, {
+			path: 'react-practice',
+			component: require('./react-practice').default
 		},
 		{
-			path:'react-router',
-			component:require('./react-router').default
+			path: 'react-router',
+			component: require('./react-router').default
 		},
 		{
-			path:'redux',
-			component:require('./redux').default
+			path: 'redux',
+			component: require('./redux').default
 		},
 		{
-			path:'reactNative',
-			component:require('./reactNative').default
+			path: 'reactNative',
+			component: require('./reactNative').default
+		},
+		{
+			path: 'flux',
+			component: require('./flux').default
 		}
 	]
 }

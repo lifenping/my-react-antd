@@ -79,32 +79,7 @@ babel-preset-react-hmre  插件用于模块热加载（HMR）
 aa{
 	:global{border:0;}
 }
-
-// your import; foo contains .foo .bar { }
-@global-import 'foo';
-
-// we wrap :global around it
-:global {
-.foo .bar { }
-}
-
-// then postcss-nested runs
-:global .foo .bar { }
-
-// then local by default runs
-.foo .bar { }
-
-
-
-@global-import from 'bootstrap/buttons';
-would turn into
-
-:global {
-...
-styles from 'bootstrap/buttons';
-...
-}
-
+七. 包管理文件中引入git文件："nsip": "git+https://git.ms.netease.com/***.git#v0.0.15"
 
 `}
 

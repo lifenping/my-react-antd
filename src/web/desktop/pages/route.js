@@ -7,8 +7,8 @@ export default {
   indexRoute: { component: Home },
   childRoutes: [
     {
-			path:'questions',
-			component:require('./questions').default
+			path:'test',
+			component:require('./test').default
 		},
     require('./doc/route').default,
     require('./js/route').default,

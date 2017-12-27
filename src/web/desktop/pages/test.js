@@ -2,14 +2,12 @@ import React, { Component } from 'react'
 import style from './index.less'
 
 class item extends Component {
-	constructor (props) {
+	constructor(props) {
 		super(props)
 	}
 	render() {
 		return (
-			<pre>
-				
-			</pre>
+			<div></div>
 		);
 	}
 }

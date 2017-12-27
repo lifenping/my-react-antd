@@ -54,7 +54,10 @@ function Hoo(props){
 
 `}     
         
-            
+<h3>生命周期中可使用setState的方法及周期调用次数总结</h3>  
+<img src={require('./img/setState.png')} style={{width:'50%',display:'block'}} alt=""/> 
+
+
 </pre>
 
 

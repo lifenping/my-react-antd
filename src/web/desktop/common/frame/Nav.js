@@ -30,15 +30,16 @@ class Nav extends React.Component {
                     mode="inline"
                 >
                     <Menu.Item key="index1"><IndexLink to="/">Home</IndexLink></Menu.Item>
-                    {/* <Menu.Item key="index2"><Link to="/questions">要完成的任务</Link></Menu.Item> */}
+                    <Menu.Item key="index2"><Link to="/test">test</Link></Menu.Item>
                     <SubMenu key="sub3" title={<span><Icon type="appstore" />react</span>}>
                         <Menu.Item key="sub3-7"><Link to="react/note">应用总结</Link></Menu.Item>
                         <Menu.Item key="sub3-1"><Link to="react/react-router">react-router</Link></Menu.Item>
                         <Menu.Item key="sub3-3"><Link to="react/life">react组件的生命周期</Link></Menu.Item>
-						<Menu.Item key="sub3-6"><Link to="react/redux">redux</Link></Menu.Item>
-						<Menu.Item key="sub3-8"><Link to="react/antd">antd 练习</Link></Menu.Item>
-						<Menu.Item key="sub3-9"><Link to="react/react-practice">react 练习</Link></Menu.Item>
-						<Menu.Item key="sub3-10"><Link to="react/reactNative">react Native练习及工具(xcode)使用</Link></Menu.Item>
+                        <Menu.Item key="sub3-6-1"><Link to="react/flux">flux</Link></Menu.Item>
+                        <Menu.Item key="sub3-6-2"><Link to="react/redux">redux</Link></Menu.Item>
+                        <Menu.Item key="sub3-8"><Link to="react/antd">antd 练习</Link></Menu.Item>
+                        <Menu.Item key="sub3-9"><Link to="react/react-practice">react 练习</Link></Menu.Item>
+                        <Menu.Item key="sub3-10"><Link to="react/reactNative">react Native练习</Link></Menu.Item>
                     </SubMenu>
                     <SubMenu key="sub1" title={<span><Icon type="appstore" />webpack笔记</span>}>
                         <Menu.Item key="sub1-6"><Link to="/webpackPages/note">应用总结</Link></Menu.Item>

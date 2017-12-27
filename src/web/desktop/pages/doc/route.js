@@ -16,10 +16,6 @@ export default {
 		{
 			path:'markdown',
 			component:require('./markdown').default
-		},
-		{
-			path:'link',
-			component:require('./link').default
 		}
 	]
 }
