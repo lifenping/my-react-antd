@@ -7,56 +7,16 @@ import { Form, Checkbox, Input, Upload, Icon, Button, message } from 'antd';
 import UploadItemBtn from './UploadItemBtn'
 import UploadItemInput from './UploadItemInput'
 
+import FormBase from './FormBase'
+import CheckBoxItem from './CheckBoxItem'
+import FormInput from './FormInput'
+import TableExpand from './TableExpand'
+import TabelChildren from './TabelChildren';
+
+import style from './index.less'
+
 const FormItem = Form.Item
 const CheckboxGroup = Checkbox.Group
-
-// 定义一个 Form 组件
-class FormBase extends Component {
-	onSubmit = () => {
-		// console.log(this)
-		this.props.form.validateFields((errors, values) => {
-			if (!errors) {
-				console.log(values)
-			}
-		})
-	}
-	render() {
-		return (
-			<Form onSubmit={this.onSubmit}>
-				{React.Children.map(this.props.children, child => {
-					// console.log(child.type)
-					if (child.type === "p" || child.type === "pre") {
-						return child
-					} else {
-						return React.cloneElement(child, {
-							key: child.props.name,
-							layout: child.props.layout || {},
-							getFieldDecorator: this.props.form.getFieldDecorator
-						})
-					}
-				})}
-			</Form>
-		);
-	}
-}
-FormBase = Form.create({})(FormBase);
-
-// 创建CheckboxItem组件
-class CheckboxItem extends Component {
-	render() {
-		const { label, name, initialValue, layout, rules, getFieldDecorator, options, ...othersProps } = this.props;
-		return (
-			<FormItem label={label} {...layout}>
-				{getFieldDecorator(name, {
-					initialValue: initialValue,
-					rules: rules
-				})(
-					<CheckboxGroup options={options} {...othersProps} />
-					)}
-			</FormItem>
-		)
-	}
-}
 
 // 页面组件
 export default class Item extends Component {
@@ -113,7 +73,29 @@ export default class Item extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className={style.page}>
+				<h3>表格组件中行的扩展应用总结</h3>
+				<div>
+					在分页表格中实现默认展开所有追加的行内容，可应用defaultExpandAllRows属性，默认展开所有子行内容。<br />
+					常见问题：<br />
+					如果数据源中的dataSource是异步加载的，则defaultExpandAllRows会失效，即它的值会一直是[]。<br />
+					原因是：defaultExpandAllRows只会渲染一次,解决办法：<br />
+					1. 当dataSource有值时再渲染Tabel表格，延时渲染时机<br />
+					2. 用expandedRowKeys属性来实现，并结合onExpand来控制子行的显示与隐藏
+				</div>
+				<h3>应用实例：</h3>
+				<p className={style.bgGray}>1. 可用 表格组件中 expandedRowRender / (defaultExpandAllRows / defaultExpandedRowKeys / expandedRowKeys)onExpand/onExpandedRowsChange 这几个属性来实现，<br />
+					优点：功能属性较多。<br />
+					缺点：无子行的数据也会显示收缩与隐藏按钮。不能实现无子行内容时隐藏父行中的收缩或隐藏按钮。
+				</p>
+				<TableExpand />
+				<p  className={style.bgGray}>
+					2. 在dataSource的每条数据中追加children属性，并且可用defaultExpandAllRows / defaultExpandedRowKeys / expandedRowKeys来控制children的内容默认展开。<br />
+					优点：有childen的行前会默认显示 收缩与隐藏 按钮，无childen的行此按钮不会显示。<br />
+					缺点：只适用于子行内容和父行内容的列内容是一样的场景。
+				</p>
+				<TabelChildren />
+
 				<h3>Form及控件应用练习</h3>
 				<ul>
 					<li>1. 不在表单中应用表单控件</li>
@@ -123,7 +105,7 @@ export default class Item extends Component {
 
 					<li style={{ paddingTop: '20px' }}>2. 表单中应用控件，表单和控件都写成一个组件</li>
 					<FormBase>
-						<CheckboxItem layout={{ labelCol: { span: 1 }, wrapperCol: { span: 23 } }} name="checkBox" label="复选框" options={[{ "value": "1", "label": "选项一" }, { "value": "2", "label": "选项二" }]} />
+						<CheckBoxItem layout={{ labelCol: { span: 1 }, wrapperCol: { span: 23 } }} name="checkBox" label="复选框" options={[{ "value": "1", "label": "选项一" }, { "value": "2", "label": "选项二" }]} />
 					</FormBase>
 
 					<li>3. 表单中插入一个文本框组件（整个内容当成一个组件）</li>
@@ -172,9 +154,7 @@ export default class Item extends Component {
 					<UploadItemBtn />
 
 					<li>4. form表单中含有一文本控件，且点击控件进行上传并把上传后的名子显示在文本框中，提交表单时把上传接口的返回值当作请求参数提交</li>
-					<FormBase
-
-					>
+					<FormBase>
 						<UploadItemInput
 							name="rs"
 							label="上传"
@@ -191,7 +171,7 @@ export default class Item extends Component {
 						<p>
 							<Button htmlType='submit' type='primary'>提交 - Upload未被getFieldDecorator修饰，且Upload组件中有隐藏文本域且被getFieldDecorator修饰，值为上传接口返回的数据</Button>
 						</p>
-						</FormBase>
+					</FormBase>
 
 					<li>5. antd上传组件有action，且上传完毕后接口返回图片的url地址，前端显示缩略图，表单提交请求图片的url地址</li>
 					<li>6. antd上传组件无action，且上传完毕后接口只返回200，无其它值，前端显示缩略图，可通过canvas画图来实现预览本地路径下的图片，且表单提交时给后端传递上传文件的参数</li>
@@ -260,23 +240,8 @@ export default class Item extends Component {
 	}
 }
 
-// 创建一表单且含有一文本框控件
-class FormInput extends Component {
-	render() {
-		return (
-			<Form>
-				<FormItem>
-					{this.props.form.getFieldDecorator('inputName', {
-						initialValue: 'Form模块测试',
-						rules: []
-					})(
-						<Input />
-						)}
-				</FormItem>
-			</Form>
-		)
-	}
-}
-FormInput = Form.create({})(FormInput);
+
+
+
 
 

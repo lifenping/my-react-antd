@@ -26,12 +26,15 @@ class item extends Component {
 解决办法：
 给标签添加dangerouslySetInnerHTML属性，来输出html代码，
 如：let content = "<span>动态插入的内容</span>"
-<div>{content}</div>
-<div dangerouslySetInnerHTML={{ __html: content }}></div>
-分别输出：
+<div>{content}</div>  
+//<div>{content}</div>
+
+<div dangerouslySetInnerHTML={{ __html: content }}></div>  
+//<div dangerouslySetInnerHTML={{ __html: content }}></div>
+
 `}
-<div>{content}</div>
-<div dangerouslySetInnerHTML={{ __html: content }}></div>
+
+
 
 {`
 1 验证组件传入的属性是否合理：
@@ -57,7 +60,14 @@ function Hoo(props){
 <h3>生命周期中可使用setState的方法及周期调用次数总结</h3>  
 <img src={require('./img/setState.png')} style={{width:'50%',display:'block'}} alt=""/> 
 
+{`
+flux
+特性：flux为单项数据流
 
+状态机：
+数学定义是一个计算模型，状态机就是保存你的状态和状态变化的一个盒子,如：
+网页上有一个菜单元素，鼠标悬停的时候，菜单显示；鼠标移开的时候，菜单隐藏。如果使用有限状态机描述，就是这个菜单只有两种状态（显示和隐藏），鼠标会引发状态转变
+`}
 </pre>
 
 

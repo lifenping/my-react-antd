@@ -39,7 +39,7 @@ module.exports = {
 	devtool: 'cheap-module-source-map',
 	// entry: getEntry(),
 	entry: {
-		main: './src/web/desktop/app'
+		main: './src/app'
 	},
 	output: {
 		path: path.resolve(__dirname, 'docs'),
@@ -99,7 +99,7 @@ module.exports = {
 			test: /\.(css|less)$/,
 			exclude: [
 				path.resolve(__dirname, 'node_modules'),
-				path.resolve(__dirname, 'src/web/desktop/common')
+				path.resolve(__dirname, 'src/common')
 			],
 			use: ExtractTextPlugin.extract({
 				fallback: "style-loader",
@@ -124,7 +124,7 @@ module.exports = {
 			test: /\.(css|less)$/,
 			include: [
 				path.resolve(__dirname, 'node_modules'),
-				path.resolve(__dirname, './src/web/desktop/common')
+				path.resolve(__dirname, './src/common')
 			],
 			use: ExtractTextPlugin.extract({
 				fallback: "style-loader",
@@ -169,7 +169,7 @@ module.exports = {
 		// 创建HtmlWebpackPlugin的实例
 		new HtmlWebpackPlugin({
 			filename: './index.html',
-			template: path.resolve(__dirname, './src/web/desktop/index.html'),
+			template: path.resolve(__dirname, './src/index.html'),
 			favicon: '',
 			inject: true
 		}),

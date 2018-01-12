@@ -32,7 +32,7 @@ class Nav extends React.Component {
                     <Menu.Item key="index1"><IndexLink to="/">Home</IndexLink></Menu.Item>
                     <Menu.Item key="index2"><Link to="/test">test</Link></Menu.Item>
                     <SubMenu key="sub3" title={<span><Icon type="appstore" />react</span>}>
-                        <Menu.Item key="sub3-7"><Link to="react/note">应用总结</Link></Menu.Item>
+                        <Menu.Item key="sub3-7"><Link to="react/note">笔记</Link></Menu.Item>
                         <Menu.Item key="sub3-1"><Link to="react/react-router">react-router</Link></Menu.Item>
                         <Menu.Item key="sub3-3"><Link to="react/life">react组件的生命周期</Link></Menu.Item>
                         <Menu.Item key="sub3-6-1"><Link to="react/flux">flux</Link></Menu.Item>

@@ -26,7 +26,7 @@ export default class Main extends Component {
 		});
 	}
 	createTodo = () => {
-		TodoAction.create({ id: 4, content: '4rd stuff' });
+		TodoAction.create({ id: Math.random(), content: '事件' + Math.random() });
 	}
 	deleteTodo = (id) => {
 		// console.log(id)
