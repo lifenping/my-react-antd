@@ -58,6 +58,10 @@ export default class Grid extends Component {
 				// defaultExpandAllRows={true}
 				expandedRowKeys={this.state.expandedRowKeys}
 				onExpand={(expanded, record) => this.onExpand(expanded, record)}
+				// 使控制子行显示与隐藏的按钮不在新追加的列中显示，而是在第一个td中显示
+				// expandIconAsCell={false}
+				// 控制收缩与隐藏子行的icon在哪列显示，值为number，当值为null时，不显示此icon
+				// expandIconColumnIndex={null}
 			/>
 		)
 	}

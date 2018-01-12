@@ -49,7 +49,7 @@ pre-commit插件：提交代码时，通过eslint检测，若有问题不允许�
 配置文件参考：http://eslint.cn
 
 三、CleanWebpackPlugin
-在每次构建前清理 /dist 文件夹，只会生成用到的文件
+在每次构建前清理 /dist 文件夹，只会生成用到的文件，也可通过build命令时，添加rm -rf ./dist 来删除
 
 四、代码分离
 vendor 在 webpack 中对应的功能点是 CODE SPLITTING 也可以在此查看 webpack 对其的一些说明，

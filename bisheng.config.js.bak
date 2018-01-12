@@ -1,0 +1,29 @@
+const path = require('path'); // node 原生path模块 
+module.exports = {
+	exclude: /should-be-ignore/,
+	port: 8000,
+	root: '/',
+	// entryName: 'index',
+	source: './posts',
+	output: './output',
+	htmlTemplate: path.join(__dirname, './template.html'),
+
+	theme: 'bisheng-theme-one',
+	themeConfig: {
+		home: '/',
+		sitename: 'test',
+		tagline: '测试bisheng工具的使用',
+		navigation: [{
+			title: '导航1',
+			link: '/posts/a',
+		}, {
+			title: '导航2',
+			link: '/posts/b',
+		}],
+		footer: 'footer content',
+		// 隐藏bisheng的github入口
+		// hideBisheng: true,
+		// github: 'https://github.com/benjycui/bisheng',
+	}
+
+};

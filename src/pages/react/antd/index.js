@@ -75,8 +75,11 @@ export default class Item extends Component {
 		return (
 			<div className={style.page}>
 				<h3>表格组件中行的扩展应用总结</h3>
+				<p className={style.bgGray}>官网api中未指明的属性有：expandIconAsCell/expandIconColumnIndex。<br />
+				1. 可用expandIconAsCell来使控制收缩与隐藏子行的icon 不在新追加的列中显示，而是在第一个td中显示<br />
+				2. expandIconColumnIndex 控制收缩与隐藏子行的icon在哪列显示，值为number，当值为null时，不显示此icon，但为null时添加expandIconAsCell={false}才可生效<br />
+				</p>
 				<div>
-					在分页表格中实现默认展开所有追加的行内容，可应用defaultExpandAllRows属性，默认展开所有子行内容。<br />
 					常见问题：<br />
 					如果数据源中的dataSource是异步加载的，则defaultExpandAllRows会失效，即它的值会一直是[]。<br />
 					原因是：defaultExpandAllRows只会渲染一次,解决办法：<br />
@@ -86,7 +89,7 @@ export default class Item extends Component {
 				<h3>应用实例：</h3>
 				<p className={style.bgGray}>1. 可用 表格组件中 expandedRowRender / (defaultExpandAllRows / defaultExpandedRowKeys / expandedRowKeys)onExpand/onExpandedRowsChange 这几个属性来实现，<br />
 					优点：功能属性较多。<br />
-					缺点：无子行的数据也会显示收缩与隐藏按钮。不能实现无子行内容时隐藏父行中的收缩或隐藏按钮。
+					缺点：无子行的数据也会显示收缩与隐藏按钮。不能实现无子行内容时隐藏父行中的收缩或隐藏按钮，可通过api中的rowClassName方式来控制样式来实现
 				</p>
 				<TableExpand />
 				<p  className={style.bgGray}>
