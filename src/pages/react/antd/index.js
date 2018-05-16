@@ -89,13 +89,12 @@ export default class Item extends Component {
 				<h3>应用实例：</h3>
 				<p className={style.bgGray}>1. 可用 表格组件中 expandedRowRender / (defaultExpandAllRows / defaultExpandedRowKeys / expandedRowKeys)onExpand/onExpandedRowsChange 这几个属性来实现，<br />
 					优点：功能属性较多。<br />
-					缺点：无子行的数据也会显示收缩与隐藏按钮。不能实现无子行内容时隐藏父行中的收缩或隐藏按钮，可通过api中的rowClassName方式来控制样式来实现
+					缺点：无子行内容时父行中也会显示行扩展icon（控制收缩与隐藏），可通过api中的rowClassName方式来控制样式来控制隐藏。
 				</p>
 				<TableExpand />
 				<p  className={style.bgGray}>
 					2. 在dataSource的每条数据中追加children属性，并且可用defaultExpandAllRows / defaultExpandedRowKeys / expandedRowKeys来控制children的内容默认展开。<br />
-					优点：有childen的行前会默认显示 收缩与隐藏 按钮，无childen的行此按钮不会显示。<br />
-					缺点：只适用于子行内容和父行内容的列内容是一样的场景。
+					优点：有childen的行前会默认显示 收缩与隐藏 按钮，无childen的行此按钮不会显示。默认用于子行内容和父行内容的数据源内容一样的场景
 				</p>
 				<TabelChildren />
 

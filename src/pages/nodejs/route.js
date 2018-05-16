@@ -3,9 +3,8 @@
  * 路由文件
  */
 import Router from 'Router'
-// import Frame from 'frame'
 export default {
-	path: 'doc',
+	path: 'nodejs',
 	component: Router,
 	/**
 	 * 子路由配置
@@ -14,8 +13,8 @@ export default {
 	 */
 	childRoutes: [
 		{
-			path:'markdown',
-			component:require('./markdown').default
-		}
+			path: 'note',
+			component: require('./note').default
+		},
 	]
 }

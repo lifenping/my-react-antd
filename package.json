@@ -54,17 +54,21 @@
     "react-markdown": "^2.5.0",
     "react-markdown-loader": "^1.1.11",
     "react-native": "^0.48.3",
-    "react-redux": "4.4.x",
     "react-router": "^2.0.1",
     "react-router-redux": "^4.0.1",
     "react-transform-catch-errors": "^1.0.2",
     "react-transform-hmr": "^1.0.4",
     "redbox-react": "^1.2.10",
+    
+    "react-redux": "4.4.x",
     "redux": "^3.5.2",
+    "redux-promise-middleware": "^3.0.0",
     "redux-thunk": "^2.1.0",
     "style-loader": "^0.13.0",
     "webpack": "^3.4.1",
-    "webpack-dev-server": "^2.9.3"
+    "webpack-dev-server": "^2.9.3",
+    "marked": "^0.3.5",
+    "leancloud-storage": "^3.1.0"
   },
   "scripts": {
     "init": "npm install --no-optional -s --registry=https://registry.npm.taobao.org",

@@ -7,13 +7,20 @@ export default {
   indexRoute: { component: Home },
   childRoutes: [
     {
-			path:'test',
-			component:require('./test').default
-		},
-    require('./doc/route').default,
+			path:'note_test',
+			component:require('./note_test').default
+    },
+    {
+			path:'webpack',
+			component:require('./webpack').default
+    },
+    {
+			path:'markdown',
+			component:require('./markdown').default
+    },
     require('./js/route').default,
+    require('./nodejs/route').default,
     require('./react/route').default,
-    require('./webpackPages/route').default
   ]
 }
 

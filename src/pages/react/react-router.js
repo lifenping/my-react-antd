@@ -29,6 +29,7 @@ class item extends Component {
 <a href="https://baidu.com">测试链接</a>
 
 {`
+路由器Router就是React的一个组件
 
 一、配置路由
 1、使用JSX的嵌套写法：

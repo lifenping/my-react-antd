@@ -2,13 +2,31 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom'
 import { Router, Route, hashHistory, browserHistory } from 'react-router';
 
+import { bindActionCreators, createStore, applyMiddleware } from 'redux';
+import { connect, Provider } from 'react-redux';
+import thunkMiddleware from 'redux-thunk';
+import promiseMiddleware from 'redux-promise-middleware';
+
+// import rootReducer from './pages/react/redux-createnote/reducers';
+
+import reducer from './pages/react/redux/reducer'
 import route from './pages/route.js';
 
+
+// create store with middlewares
+// const store = applyMiddleware(
+// 	thunkMiddleware,
+// 	promiseMiddleware()
+//   )(createStore)(rootReducer);
+
+let store = createStore(reducer)
+
 ReactDOM.render(
-	<Router history={hashHistory} routes={route} />,
+	<Provider store={store}>
+		<Router history={hashHistory} routes={route} />
+	</Provider>,
 	document.getElementById('app')
 )
-
 
 
 

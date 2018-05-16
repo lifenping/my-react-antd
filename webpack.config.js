@@ -14,7 +14,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin'); // webpack插件
 // const OpenBrowserPlugin = require('open-browser-webpack-plugin');//webpack插件
 const CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;// 处理trunk
 // 在每次构建前清理 /dist 文件夹，只会生成用到的文件
-const CleanWebpackPlugin = require('clean-webpack-plugin') //webpack插件，用于清除目录文件
+// const CleanWebpackPlugin = require('clean-webpack-plugin') //webpack插件，用于清除目录文件
 
 const env = process.env.NODE_ENV
 
@@ -162,7 +162,7 @@ module.exports = {
 	},
 
 	plugins: [
-		new CleanWebpackPlugin(['docs']),
+		// new CleanWebpackPlugin(['docs']),
 		// new ExtractTextPlugin("[name].css"),
 		new ExtractTextPlugin('[name].[hash].css'),
 		// 创建HtmlWebpackPlugin的实例

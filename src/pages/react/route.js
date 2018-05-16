@@ -32,16 +32,17 @@ export default {
 			component: require('./react-router').default
 		},
 		{
-			path: 'redux',
-			component: require('./redux').default
-		},
-		{
 			path: 'reactNative',
 			component: require('./reactNative').default
 		},
 		{
 			path: 'flux',
 			component: require('./flux').default
-		}
+		},
+		// simple eg
+		{
+			path: 'redux',
+			component: require('./redux').default
+		},
 	]
 }

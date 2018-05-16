@@ -14,12 +14,38 @@ export default {
 	 */
 	childRoutes: [
 		{
-			path:'assign',
-			component:require('./assign').default
+			path:'note',
+			component:require('./note').default
 		},
 		{
 			path:'moment',
 			component:require('./moment').default
-		}
+		},
+		{
+			path:'es6-Promise',
+			component:require('./es6-Promise').default
+		},
+		{
+			path:'es6-Symbol',
+			component:require('./es6-Symbol').default
+		},
+		// __proto__
+		{
+			path:'__proto__',
+			component:require('./__proto__').default
+		},
+		{
+			path:'this',
+			component:require('./this').default
+		},
+		{
+			path:'module',
+			component:require('./module').default
+		},
+		{
+			path:'module',
+			component:require('./module').default
+		},
+		// /node/note
 	]
 }
